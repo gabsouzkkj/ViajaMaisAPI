@@ -1,0 +1,599 @@
+{
+  "info": {
+    "_postman_id": "9288bb8e-767c-4aa2-b050-5693cd426b62",
+    "name": "ViajaMaisAPI",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "26690442"
+  },
+  "item": [
+    {
+      "name": "Cliente",
+      "item": [
+        {
+          "name": "Listar Cliente [TODOS]",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5105/api/Clientes",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5105",
+              "path": [
+                "api",
+                "Clientes"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Listar Cliente [ID]",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nome\": \"João da Silva\",\r\n  \"documento\": \"12345678909\",\r\n  \"email\": \"joao@email.com\",\r\n  \"telefone\": \"11999999999\",\r\n  \"dataCadastro\": \"2026-06-12T18:30:38.450Z\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5105/api/Clientes/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5105",
+              "path": [
+                "api",
+                "Clientes",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Atualizar Cliente [ID]",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 1,\r\n  \"nome\": \"Gabriel Philippe Souza da Silva\",\r\n  \"documento\": \"00000000001\",\r\n  \"email\": \"gabriel.philippe@gmail.com\",\r\n  \"telefone\": \"14998783199\",\r\n  \"dataCadastro\": \"2026-06-12T18:31:08.355Z\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5105/api/Clientes/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5105",
+              "path": [
+                "api",
+                "Clientes",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Registrar Cliente",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nome\": \"Raphael\",\r\n  \"documento\": \"22233344455\",\r\n  \"email\": \"rapha@outlook.com\",\r\n  \"telefone\": \"11944443333\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5105/api/Clientes",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5105",
+              "path": [
+                "api",
+                "Clientes"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Excluir Cliente [ID]",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 1,\r\n  \"nome\": \"Gabriel Philippe Souza da Silva\",\r\n  \"documento\": \"00000000001\",\r\n  \"email\": \"gabriel.philippe@gmail.com\",\r\n  \"telefone\": \"14998783199\",\r\n  \"dataCadastro\": \"2026-06-12T18:31:08.355Z\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5105/api/Clientes/6",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5105",
+              "path": [
+                "api",
+                "Clientes",
+                "6"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Reserva",
+      "item": [
+        {
+          "name": "Listar Reserva [TODAS]",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 1,\r\n  \"nome\": \"Gabriel Philippe Souza da Silva\",\r\n  \"documento\": \"00000000001\",\r\n  \"email\": \"gabriel.philippe@gmail.com\",\r\n  \"telefone\": \"14998783199\",\r\n  \"dataCadastro\": \"2026-06-12T18:31:08.355Z\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5105/api/Reservas",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5105",
+              "path": [
+                "api",
+                "Reservas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Lista Reserva [ID]",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nome\": \"João da Silva\",\r\n  \"documento\": \"12345678909\",\r\n  \"email\": \"joao@email.com\",\r\n  \"telefone\": \"11999999999\",\r\n  \"dataCadastro\": \"2026-06-12T18:30:38.450Z\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5105/api/Reservas/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5105",
+              "path": [
+                "api",
+                "Reservas",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Registrar Reserva",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"clienteId\": 10,\r\n  \"pacoteViagemId\": 1,\r\n  \"quantidadePassageiros\": 1,\r\n  \"status\": \"Confirmada\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5105/api/Reservas",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5105",
+              "path": [
+                "api",
+                "Reservas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Excluir Reserva [ID]",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"dataCompra\": \"{{$isoTimestamp}}\",\r\n  \"quantidadePassageiros\": 2,\r\n  \"statusPagamento\": \"Pendente\",\r\n  \"clienteId\": 1,\r\n  \"pacoteViagemId\": 1\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5105/api/Reservas/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5105",
+              "path": [
+                "api",
+                "Reservas",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Hotel",
+      "item": [
+        {
+          "name": "Listar Hotel [TODOS]",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nome\": \"Pousada Flor do Mar\",\r\n  \"endereco\": \"Rua das Pedras, 45 - Centro\",\r\n  \"classificacao\": 3,\r\n  \"precoDiaria\": 180.00,\r\n  \"destinoId\": 1\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5105/api/Hoteis",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5105",
+              "path": [
+                "api",
+                "Hoteis"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Listar Hotel [ID]",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5105/api/Hoteis/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5105",
+              "path": [
+                "api",
+                "Hoteis",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Registrar Hotel",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nome\": \"Pousada Flor do Mar\",\r\n  \"endereco\": \"Rua das Pedras, 45 - Centro\",\r\n  \"classificacao\": 3,\r\n  \"precoDiaria\": 180.00,\r\n  \"destinoId\": 1\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5105/api/Hoteis",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5105",
+              "path": [
+                "api",
+                "Hoteis"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Excluir Hotel [ID]",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:5105/api/Hoteis/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5105",
+              "path": [
+                "api",
+                "Hoteis",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Pacote Viagem",
+      "item": [
+        {
+          "name": "Listar Pacote de Viagem [TODOS]",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:5105/api/PacotesViagem",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5105",
+              "path": [
+                "api",
+                "PacotesViagem"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Listar Pacote de Viagem [ID]",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:5105/api/PacotesViagem/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5105",
+              "path": [
+                "api",
+                "PacotesViagem",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Registrar Pacote de Viagem",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nomePacote\": \"Fim de Semana no Rio\",\r\n  \"preco\": 1250.00,\r\n  \"vagasDisponiveis\": 20,\r\n  \"dataSaida\": \"2026-08-15T10:00:00Z\",\r\n  \"dataRetorno\": \"2026-08-18T16:00:00Z\",\r\n  \"destinoId\": 1\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5105/api/PacotesViagem",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5105",
+              "path": [
+                "api",
+                "PacotesViagem"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Excluir Pacote de Viagem [ID]",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:5105/api/PacotesViagem/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5105",
+              "path": [
+                "api",
+                "PacotesViagem",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Destinos",
+      "item": [
+        {
+          "name": "Listar Destino [TODOS]",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nomePacote\": \"Fim de Semana no Rio\",\r\n  \"preco\": 1250.00,\r\n  \"vagasDisponiveis\": 20,\r\n  \"dataSaida\": \"2026-08-15T10:00:00Z\",\r\n  \"dataRetorno\": \"2026-08-18T16:00:00Z\",\r\n  \"destinoId\": 1\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5105/api/Destinos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5105",
+              "path": [
+                "api",
+                "Destinos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Listar Destino [ID]",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nomePacote\": \"Fim de Semana no Rio\",\r\n  \"preco\": 1250.00,\r\n  \"vagasDisponiveis\": 20,\r\n  \"dataSaida\": \"2026-08-15T10:00:00Z\",\r\n  \"dataRetorno\": \"2026-08-18T16:00:00Z\",\r\n  \"destinoId\": 1\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5105/api/Destinos/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5105",
+              "path": [
+                "api",
+                "Destinos",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Registrar Destino",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"cidade\": \"Rio de Janeiro\",\r\n  \"estadoOuPais\": \"RJ\",\r\n  \"descricao\": \"Cidade Maravilhosa, praias de Copacabana, Ipanema e o Cristo Redentor.\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5105/api/Destinos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5105",
+              "path": [
+                "api",
+                "Destinos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Excluir Destino [ID]",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:5105/api/Destinos/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5105",
+              "path": [
+                "api",
+                "Destinos",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

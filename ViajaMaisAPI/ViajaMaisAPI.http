@@ -1,0 +1,6 @@
+@ViajaMaisAPI_HostAddress = http://localhost:5105
+
+GET {{ViajaMaisAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
